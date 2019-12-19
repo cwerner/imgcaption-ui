@@ -1,0 +1,7 @@
+repos:
+-   repo: https://github.com/ambv/black
+    rev: master
+    hooks:
+    - id: black
+      exclude: versioneer.py ^imgcaption-ui/_version.py
+      language_version: python3.8
