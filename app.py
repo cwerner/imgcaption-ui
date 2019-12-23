@@ -44,7 +44,7 @@ class EndPoint:
     def is_reachable(self, timeout: Optional[int] = 3):
         try:
             response = requests.get(self.format(), timeout=timeout)
-        except requests.ConnectTimeout:
+        except requests.exceptions.ConnectTimeout:
             return False
         return True if response.status_code < 400 else False
 
